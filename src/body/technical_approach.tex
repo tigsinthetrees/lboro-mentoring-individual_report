@@ -1,0 +1,76 @@
+%! Author = tigsedmonds
+%! Date = 04/05/2023
+%! Objective = Evaluate how well they did the technical stuff over the project
+
+% Evaluation of technical approach (20 pts) (5points each)
+%   Approach and application to the project
+%   Technical knowledge/understanding.
+%   Requirements specification
+%   Level of effort of Part B
+
+
+\section{Evaluation of Technical Approach}\label{sec:technical}
+    \subsection{Project Approach}\label{subsec:technical-project_aproach}
+        As previously mentioned, this team took an agile approach to development.
+        This was recommended by the mentors, due to the nature of the assessment requirements, which placed a large emphasis on finishing the project with a working robot.
+        Agile development focuses on getting a working product as fast as possible, and then adding additional features with future iterations.
+        For example, the first sprint focused on making the robot stop a set distance from a wall, and then subsequent sprints focused on turning, and then wall following.
+        Initially the robot was developed using just ultrasonic sensors, but recommendations from the mentors led to the inclusion of a gyroscope in future iterations.
+
+        Overall, this approach worked well for this project.
+        The team were resistant to nominating an official team leader, which was acceptable for a team of this size, but would have been problematic in an agile team of a larger size, where a facilitator is needed to provide structure.
+        It also integrated well with the risk management approach they selected.
+        In mitigation of the risk identified in \autoref{subsec:managemement-plan}, the team implemented a version control strategy, using GitHub.
+        This reduced the harm of the risk by giving everyone access to the code, so if one group member fell ill, no work would be lost.
+        They shared non-code documents using a Teams space, which aimed to achieve the same effect.
+        Initially the team tried to share code using this same Teams space, but found this not to be reliable, and they lost some of the work they had tried to share.
+        Thankfully, this occurred after they had started using GitHub so they did not permanently lose work, and this experience demonstrated the value of robust version control to the students.
+
+    \subsection{Requirements Specification}\label{subsec:technical-requirements}
+        The drawback of the Agile approach was that the team did not spend a lot of time on the formal design of the project.
+        Requirements were written retrospectively, rather than being used to guide and document the design.
+        In a more complex project, or if they had a less detailed design specification, this would have been a serious issue.
+        Requirements can serve to ensure all team members are working towards the same goal.
+        For example, with a project such as the Acrobatics challenge, requirements would ensure all team members had the same idea of what the robot should be able to achieve.
+        However, the Maze Solver was the task with the clearest design specification provided by the assessors.
+        Thus, the team essentially used this as an informal set of requirements until a later stage.
+
+        Support from the mentors was required to develop the requirements, as the team seemed to have little knowledge of how to approach this.
+        Ultimately, the mentors provided resources on the types of requirements, and some samples from a different system to illustrate the difference between operational, functional and non-functional requirements.
+        The team developed an operational requirement, and broke this down into five functional requirements.
+        Despite prompting, the team did not produce a set of non-functional requirements.
+        This held them back in their testing and verification efforts, as they could not show whether they had met their requirements, or measure the completeness of their system.
+
+    \subsection{Knowledge and Understanding}\label{subsec:technical-knowledge}
+        The team produced some informal diagrams to document the system they produced.
+        They produced an informal block diagram for the electrical design, and for the code.
+        These diagrams intended to communicate the structure of the system for the purposes of presentation and assessment, but were not used during development.
+
+        The team had a clear understanding that having a modular system was advantageous, however they did not seem to grasp the true benefits, or risks associated with that.
+        This is partially a result of how the project was framed: they understood themselves as a company selling a product, so they saw the advantage of
+        Approach to integration/modularity
+        Team understood that modularity was good.
+        Did not understand why.
+        As a result of how the project was framed: they were structuring themselves as a company selling a product.
+        In reality the primary benefit of the modularity they built in was that it made the system easy for them to modify and adapt.
+        Could have created integration issues - would personally have created very robust interfaces.
+        This did in fact cause some of the issues they later had to debug.
+        Would have benefited by having some diagrams of this modularity to visualise their interfaces.
+        Would have been able to identify which other systems would be affected by changes - emergence.
+
+        Approach to testing/fault-finding
+        Lack of non-functional requirements meant that testing was not against intended standards.
+        They therefore did not have a formal suite of tests to do on the subsystems.
+        This extended the amount of time that fault-finding took, because there was no clear understanding of which parts of the process were performing unacceptable.
+        For example, they had a problem with getting the robot to follow walls.
+        They could not say whether this issue was caused by the distance they were trying to achieve, the performance of the gyroscope, the performance of their ultrasound sensors, or their code.
+        Meant resolving this issue was random adjustment.
+        They could not find the root cause.
+
+    \subsection{Team Effort}\label{subsec:technical-effort}
+        Link back to task allocation.
+        Mechanical seems like smallest section of the project.
+        Electrical decisions were made as a group (much more than software or mechanical)
+        Software was largest part of the project - assigning this to one person, yikes.
+
+        Evaluation of each Part B

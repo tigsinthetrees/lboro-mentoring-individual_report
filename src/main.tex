@@ -1,0 +1,78 @@
+%! Author = tigsedmonds
+%! Date = 04/05/2023
+
+% Report Quality (20%):
+%   Quality of writing, formatting (10 pts)
+%       abstract, table of contents, introduction, and conclusion
+%   References (to include your group reports) and level of effort (10 pts)
+%   4000 words in total
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+    % general
+\usepackage{amsmath}
+    % formatting
+\usepackage{geometry} % enables custom margins
+\usepackage[page, title, titletoc]{appendix} % adds title before appendices start, 'appendix' before each appendix, and full title to toc
+\usepackage{helvet} % nicer font but slightly bigger
+    % for references
+\usepackage[backend=biber,style=ieee,defernumbers=true]{biblatex} % proper referencing
+\usepackage{hyperref} % allows sensible references (with object name)
+
+% Page Formatting
+    % adjusts margins
+\geometry{
+    a4paper,
+    left=62pt,
+    right=51pt,
+    top=70pt,
+    bottom=70pt,
+ }
+    % sans-serif font
+\renewcommand{\familydefault}{\sfdefault}
+
+% Set Up Bibliography
+\DeclareBibliographyCategory{cited}
+\AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+\addbibresource{main.bib}
+
+% Document
+\begin{document}
+    % Formatting for Title Page
+    \pagenumbering{gobble}
+
+    % Title Page
+    \input{body/title_page}    % todo: abstract
+    \pagebreak
+
+    % Formatting for TOCs
+    \pagenumbering{roman}
+    \setlength{\parskip}{0em}
+
+    % Tables of Contents
+    \tableofcontents
+    \pagebreak
+    \listoffigures
+    \listoftables
+    \pagebreak
+
+    % Formatting for Body
+    \setlength{\parskip}{1em}
+    \emergencystretch=1em
+
+    \pagenumbering{roman}
+    % todo: introduction
+    \input{body/introduction}
+    \input{body/management}
+    % todo: evaluation of technical appraoch
+    \input{body/technical_approach}
+    % todo: analysis of achievement
+    % todo: reflection
+    % todo: conclusions
+
+
+    \printbibliography[category=cited]
+
+\end{document}
