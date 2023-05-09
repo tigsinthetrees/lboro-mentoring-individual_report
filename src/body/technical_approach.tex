@@ -20,7 +20,7 @@
         Overall, this approach worked well for this project.
         The team were resistant to nominating an official team leader, which was acceptable for a team of this size, but would have been problematic in an agile team of a larger size, where a facilitator is needed to provide structure.
         It also integrated well with the risk management approach they selected.
-        In mitigation of the risk identified in \autoref{subsec:managemement-plan}, the team implemented a version control strategy, using GitHub.
+        In mitigation of the risk identified in \autoref{subsec:management-plan}, the team implemented a version control strategy, using GitHub.
         This reduced the harm of the risk by giving everyone access to the code, so if one group member fell ill, no work would be lost.
         They shared non-code documents using a Teams space, which aimed to achieve the same effect.
         Initially the team tried to share code using this same Teams space, but found this not to be reliable, and they lost some of the work they had tried to share.
@@ -47,30 +47,49 @@
         These diagrams intended to communicate the structure of the system for the purposes of presentation and assessment, but were not used during development.
 
         The team had a clear understanding that having a modular system was advantageous, however they did not seem to grasp the true benefits, or risks associated with that.
-        This is partially a result of how the project was framed: they understood themselves as a company selling a product, so they saw the advantage of
-        Approach to integration/modularity
-        Team understood that modularity was good.
-        Did not understand why.
-        As a result of how the project was framed: they were structuring themselves as a company selling a product.
-        In reality the primary benefit of the modularity they built in was that it made the system easy for them to modify and adapt.
-        Could have created integration issues - would personally have created very robust interfaces.
-        This did in fact cause some of the issues they later had to debug.
-        Would have benefited by having some diagrams of this modularity to visualise their interfaces.
-        Would have been able to identify which other systems would be affected by changes - emergence.
+        This is partially a result of how the project was framed: they understood themselves as a company selling a product, so they saw the advantage of modularity as a product feature.
+        However, they did not see that designing the system with modularity meant that they could add features and easily perform repairs.
+        They also did not understand that building a system in distinct subsystems requires the strict definition of interfaces.
+        These interfaces should be robust enough to remain constant despite changes within the subsystem, in order to allow independent development.
+        This team was modifying the interface of their code with the robot on the day of their viva.
 
-        Approach to testing/fault-finding
-        Lack of non-functional requirements meant that testing was not against intended standards.
-        They therefore did not have a formal suite of tests to do on the subsystems.
-        This extended the amount of time that fault-finding took, because there was no clear understanding of which parts of the process were performing unacceptable.
-        For example, they had a problem with getting the robot to follow walls.
-        They could not say whether this issue was caused by the distance they were trying to achieve, the performance of the gyroscope, the performance of their ultrasound sensors, or their code.
-        Meant resolving this issue was random adjustment.
-        They could not find the root cause.
+        As a result of this lack of systems thinking, the system they designed was structurally modular, and easily dismantled, but they could not leverage the full benefits of their design decision.
+        In particular, they could not make use of the features of this design decision that would have made it ideal for the Agile project management technique that they had chosen to employ.
+        Modular subsystems would have allowed iterative development on each subsystem independently, over the course of the year.
+        For this project, this was not a major issue, as there were relatively few subsystems, and the interfaces were simple enough to adapt to the changes they implemented.
+        However, this approach would not work in a more complex system, or one which had to meaningfully interact with external systems.
+        For example, if the robot had been built with the Robot Operating System, it is likely that the team's attempts to change the interface at the last minute would have caused major errors.
+        They would have benefited from developing some structured diagrams of their robot.
+        In particular, Internal Block diagrams could have documented the interfaces they were designing, encouraging them to consider this element of the design in more detail.
+        This would have allowed them to consider the emergent properties of any changes to the system.
+        Unfortunately, the experience of this project will not have taught them this skill, nor the need for it, as it was not essential for such a simple system.
+
+        The lack of non-functional requirements, however, was not mitigated by the simplicity of the system.
+        Ideally, non-functional requirements place constraints upon the system, specifying how it must work, and how well it must perform.
+        In particular, non-functional performance requirements specify the standards that each element of the system must meet.
+        As the team did not have these standards, testing was informal, and haphazard, and they did not have a clear suite of tests to perform on the subsystems.
+        This delayed fault-finding efforts because there was no clear understanding of which parts of the system were performing unacceptably.
+        For example, the team encountered a problem with getting the robot to stay in the middle of the walls for their route through the maze.
+        They could not say whether this issue was caused by the distance they were trying to achieve, the performance of the gyroscope, the performance of the ultrasonic sensors, or their code.
+        They could not find the root cause of this issue, and it plagued them into the viva and olympiad.
+        As a result, they attempted to resolve this issue through manual adjustment of the code, to try and compensate.
+        This was partially successful, and their robot did navigate mazes correctly most of the time, but was not very reliable.
 
     \subsection{Team Effort}\label{subsec:technical-effort}
-        Link back to task allocation.
-        Mechanical seems like smallest section of the project.
-        Electrical decisions were made as a group (much more than software or mechanical)
-        Software was largest part of the project - assigning this to one person, yikes.
+        Overall, this team put a lot of effort into their project, consistently over the year.
+        As a result, they were rewarded with a robot that performed its task well in the olympiad, and should expect a good mark for their work.
+        Especially of note was the consistency of their effort.
+        The structure of the company meetings each week meant that the team needed to present their progress on a weekly basis.
+        This not only improved their presentation skills, but encouraged constant progress.
+        As previously mentioned, this team focused on developing a working robot as fast as possible, and then added additional features later.
+        This meant that they were the first group in their company to be able to show a demonstration of their robot working, and they continued to show demonstrations very frequently.
 
-        Evaluation of each Part B
+        The team also stretched themselves by implementing a gyroscope, at the suggestion of a mentor.
+        None of the other maze-solver teams had included anything other than ultrasonic sensors, as these are included in the base robot that they were provided.
+        The gyroscope added complexity to their system, and they did struggle initially to interface it with their system, however it also allowed for more precise turns, and their testing results showed the benefit of this decision.
+
+        Additionally, they challenged themselves to make the robot as visually appealing as possible.
+        Their robot was by far the tidiest of the maze-solver robots, and was among the neatest robots in any team.
+        They used JST connectors to avoid loose wires, and framed this around a benefit to non-technical customers.
+        They 3D printed parts to ensure the robot fitted together neatly, which required them to learn additional skills.
+        Overall, their willingness to learn new skills to add optional features to their project was impressive, and served them well in the final product.
