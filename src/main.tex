@@ -44,25 +44,21 @@
     \pagenumbering{gobble}
 
     % Title Page
-    \input{body/title_page}    % todo: abstract
+    \input{body/title_page}
     \pagebreak
 
     % Formatting for TOCs
-    \pagenumbering{roman}
     \setlength{\parskip}{0em}
 
     % Tables of Contents
     \tableofcontents
-    \pagebreak
-    \listoffigures
-    \listoftables
     \pagebreak
 
     % Formatting for Body
     \setlength{\parskip}{1em}
     \emergencystretch=1em
 
-    \pagenumbering{roman}
+    \pagenumbering{arabic}
 
     \input{body/introduction}
     \input{body/management}
@@ -70,10 +66,9 @@
     \input{body/viva}
     \input{body/achievement}
     \input{body/reflection.tex}
-    % todo: conclusions
     \input{body/conclusion}
-
-
+appendices
+    % todo: add references
     \printbibliography[category=cited]
 
 \end{document}

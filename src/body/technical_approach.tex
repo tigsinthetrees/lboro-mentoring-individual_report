@@ -10,86 +10,61 @@
 
 
 \section{Evaluation of Technical Approach}\label{sec:technical}
-    \subsection{Project Approach}\label{subsec:technical-project_aproach}
-        As previously mentioned, this team took an agile approach to development.
-        This was recommended by the mentors, due to the nature of the assessment requirements, which placed a large emphasis on finishing the project with a working robot.
-        Agile development focuses on getting a working product as fast as possible, and then adding additional features with future iterations.
-        For example, the first sprint focused on making the robot stop a set distance from a wall, and then subsequent sprints focused on turning, and then wall following.
-        Initially the robot was developed using just ultrasonic sensors, but recommendations from the mentors led to the inclusion of a gyroscope in future iterations.
+    \subsection{Project Approach}\label{subsec:technical-project_approach}
+        This team took an agile approach to development, which was suitable due to the nature of the assessment requirements, which placed a large emphasis on finishing the project with a working robot.
+        Agile development focuses on getting a working product as fast as possible and adding features with future iterations.
+        The team resisted nominating an official team leader, which could have caused issues in a larger team, as a facilitator provides structure.
 
-        Overall, this approach worked well for this project.
-        The team were resistant to nominating an official team leader, which was acceptable for a team of this size, but would have been problematic in an agile team of a larger size, where a facilitator is needed to provide structure.
-        It also integrated well with the risk management approach they selected.
-        In mitigation of the risk identified in \autoref{subsec:management-plan}, the team implemented a version control strategy, using GitHub.
-        This reduced the harm of the risk by giving everyone access to the code, so if one group member fell ill, no work would be lost.
-        They shared non-code documents using a Teams space, which aimed to achieve the same effect.
-        Initially the team tried to share code using this same Teams space, but found this not to be reliable, and they lost some of the work they had tried to share.
-        Thankfully, this occurred after they had started using GitHub so they did not permanently lose work, and this experience demonstrated the value of robust version control to the students.
+        The team implemented a version control strategy using GitHub to mitigate the risk identified in \autoref{subsec:management-plan}.
+        This gave everyone access to the code, so if one group member fell ill, no work would be lost.
+        Initially, the team tried to share code using a Teams space but found this unreliable, and some code disappeared.
+        Thankfully, this occurred after they had started using GitHub, so they did not lose work, and this demonstrated the value of version control.
 
     \subsection{Requirements Specification}\label{subsec:technical-requirements}
-        The drawback of the Agile approach was that the team did not spend a lot of time on the formal design of the project.
-        Requirements were written retrospectively, rather than being used to guide and document the design.
-        In a more complex project, or if they had a less detailed design specification, this would have been a serious issue.
-        Requirements can serve to ensure all team members are working towards the same goal.
-        For example, with a project such as the Acrobatics challenge, requirements would ensure all team members had the same idea of what the robot should be able to achieve.
-        However, the Maze Solver was the task with the clearest design specification provided by the assessors.
-        Thus, the team essentially used this as an informal set of requirements until a later stage.
+        The drawback of the Agile approach was that the team did not spend much time on formal design.
+        Requirements were written retrospectively rather than to guide and document the design.
+        Ordinarily, requirements ensure that all team members are working towards the same goal.
+        They were lucky that the Maze Solver was the task with the clearest design specification provided in the brief, so they could initially use this as an informal set of requirements.
 
-        Support from the mentors was required to develop the requirements, as the team seemed to have little knowledge of how to approach this.
-        Ultimately, the mentors provided resources on the types of requirements, and some samples from a different system to illustrate the difference between operational, functional and non-functional requirements.
-        The team developed an operational requirement, and broke this down into five functional requirements.
+        Later, the mentors provided resources on operational, functional and non-functional requirements.
+        The team developed an operational requirement and broke this down into five functional requirements.
         Despite prompting, the team did not produce a set of non-functional requirements.
-        This held them back in their testing and verification efforts, as they could not show whether they had met their requirements, or measure the completeness of their system.
+        This held them back in their testing and verification efforts, as they could not show whether they had met their requirements.
 
     \subsection{Knowledge and Understanding}\label{subsec:technical-knowledge}
-        The team produced some informal diagrams to document the system they produced.
-        They produced an informal block diagram for the electrical design, and for the code.
-        These diagrams intended to communicate the structure of the system for the purposes of presentation and assessment, but were not used during development.
-
-        The team had a clear understanding that having a modular system was advantageous, however they did not seem to grasp the true benefits, or risks associated with that.
-        This is partially a result of how the project was framed: they understood themselves as a company selling a product, so they saw the advantage of modularity as a product feature.
-        However, they did not see that designing the system with modularity meant that they could add features and easily perform repairs.
-        They also did not understand that building a system in distinct subsystems requires the strict definition of interfaces.
-        These interfaces should be robust enough to remain constant despite changes within the subsystem, in order to allow independent development.
+        The team understood that having a modular system was advantageous, but did not grasp the true benefits or risks.
+        They understood themselves as a company selling a product, so they saw modularity as a product feature, but did not see that it meant that they could add features and efficiently perform repairs.
+        They also missed that building a system in distinct subsystems requires a strict definition of interfaces, to allow independent development.
         This team was modifying the interface of their code with the robot on the day of their viva.
 
-        As a result of this lack of systems thinking, the system they designed was structurally modular, and easily dismantled, but they could not leverage the full benefits of their design decision.
-        In particular, they could not make use of the features of this design decision that would have made it ideal for the Agile project management technique that they had chosen to employ.
-        Modular subsystems would have allowed iterative development on each subsystem independently, over the course of the year.
-        For this project, this was not a major issue, as there were relatively few subsystems, and the interfaces were simple enough to adapt to the changes they implemented.
-        However, this approach would not work in a more complex system, or one which had to meaningfully interact with external systems.
-        For example, if the robot had been built with the Robot Operating System, it is likely that the team's attempts to change the interface at the last minute would have caused major errors.
+        As a result of this lack of systems thinking, they could not use the features of modularity that would have made it ideal for Agile management: modular subsystems would have allowed iterative development on each subsystem independently.
+        For this project, this was not an issue, as there were few subsystems, and the interfaces were simple.
+        However, this approach would not work in a system that had to interact with external systems.
         They would have benefited from developing some structured diagrams of their robot.
-        In particular, Internal Block diagrams could have documented the interfaces they were designing, encouraging them to consider this element of the design in more detail.
-        This would have allowed them to consider the emergent properties of any changes to the system.
-        Unfortunately, the experience of this project will not have taught them this skill, nor the need for it, as it was not essential for such a simple system.
+        In particular, Internal Block Diagrams could have documented the interfaces they were designing, encouraging them to consider the emergent properties of subsystem changes.
+        Unfortunately, this project will not have taught them this skill, nor the need for it, as it was not essential for such a simple system.
 
-        The lack of non-functional requirements, however, was not mitigated by the simplicity of the system.
-        Ideally, non-functional requirements place constraints upon the system, specifying how it must work, and how well it must perform.
-        In particular, non-functional performance requirements specify the standards that each element of the system must meet.
-        As the team did not have these standards, testing was informal, and haphazard, and they did not have a clear suite of tests to perform on the subsystems.
-        This delayed fault-finding efforts because there was no clear understanding of which parts of the system were performing unacceptably.
-        For example, the team encountered a problem with getting the robot to stay in the middle of the walls for their route through the maze.
-        They could not say whether this issue was caused by the distance they were trying to achieve, the performance of the gyroscope, the performance of the ultrasonic sensors, or their code.
-        They could not find the root cause of this issue, and it plagued them into the viva and olympiad.
-        As a result, they attempted to resolve this issue through manual adjustment of the code, to try and compensate.
-        This was partially successful, and their robot did navigate mazes correctly most of the time, but was not very reliable.
+        Ideally, non-functional requirements specify how the system must work and how well it must perform.
+        As the team did not have these standards, testing was haphazard, and they lacked a suite of tests for each subsystem.
+        There was no clear understanding of which parts of the system were performing unacceptably, extending fault-finding.
+        For example, the team struggled to get the robot to remain equidistant from the maze walls.
+        They could not say whether this issue was caused by the requirement, the sensors, or their code.
+        They could not find the root cause of this issue, and attempted to resolve it by compensating manually in the code.
+        They were partially successful, and their robot navigated mazes accurately, but was not reliably.
 
     \subsection{Team Effort}\label{subsec:technical-effort}
-        Overall, this team put a lot of effort into their project, consistently over the year.
-        As a result, they were rewarded with a robot that performed its task well in the olympiad, and should expect a good mark for their work.
-        Especially of note was the consistency of their effort.
-        The structure of the company meetings each week meant that the team needed to present their progress on a weekly basis.
-        This not only improved their presentation skills, but encouraged constant progress.
-        As previously mentioned, this team focused on developing a working robot as fast as possible, and then added additional features later.
-        This meant that they were the first group in their company to be able to show a demonstration of their robot working, and they continued to show demonstrations very frequently.
+        The structure of the company meetings meant that the team needed to present their progress weekly.
+        This improved their presentation skills and encouraged constant progress.
+        As mentioned, this team focused on developing a working robot as fast as possible and added additional features later.
+        This meant that they were the first group in their company to be able to show a demonstration of their robot working, and they continued to show demonstrations frequently.
 
-        The team also stretched themselves by implementing a gyroscope, at the suggestion of a mentor.
-        None of the other maze-solver teams had included anything other than ultrasonic sensors, as these are included in the base robot that they were provided.
-        The gyroscope added complexity to their system, and they did struggle initially to interface it with their system, however it also allowed for more precise turns, and their testing results showed the benefit of this decision.
+        The team also stretched themselves by implementing a gyroscope at the suggestion of a mentor.
+        None of the other maze-solver teams had included anything other than ultrasonic sensors, which were included in the provided robot.
+        The gyroscope added complexity to their system, and allowed for more precise turns and testing results showed the benefit of this decision.
 
         Additionally, they challenged themselves to make the robot as visually appealing as possible.
-        Their robot was by far the tidiest of the maze-solver robots, and was among the neatest robots in any team.
-        They used JST connectors to avoid loose wires, and framed this around a benefit to non-technical customers.
-        They 3D printed parts to ensure the robot fitted together neatly, which required them to learn additional skills.
-        Overall, their willingness to learn new skills to add optional features to their project was impressive, and served them well in the final product.
+        Their robot was the tidiest of the maze-solver robots and was among the neatest robots in any team.
+        They used JST connectors to avoid loose wires and 3D printed parts to ensure the robot fitted together neatly;
+        both required them to learn additional skills.
+        Overall, their willingness to learn new skills to add optional features to their project was impressive and served them well in the final product.
+
